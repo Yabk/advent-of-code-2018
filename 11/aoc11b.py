@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import fileinput
+import time
 
 gridSize = 300
 
@@ -29,7 +30,7 @@ def getBest(grid, cellSize):
 
     return best, bestCoords
 
-
+start_time = time.time()
 grid = []
 for y in range(gridSize):
     rack = []
@@ -52,3 +53,4 @@ for i in range(1, gridSize+1):
 print(best)
 print(bestCoords)
 print(bestSize)
+print('time: '+str(time.time()-start_timedx))
